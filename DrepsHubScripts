@@ -436,7 +436,7 @@ LocalSection:NewDropdown("Teleport Islands 1", "Teleport to Islands", {"Lava Isl
  
  
  local args = {
-     [1] = "lava" 
+     [1] = "desert" 
  }
  
  game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
