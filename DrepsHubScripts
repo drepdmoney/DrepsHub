@@ -528,7 +528,7 @@ Duration = 7; -- how long the notification should in secounds
 
 
 
-
+-- blox fruits 1st sea starts here
 
 
 
@@ -833,4 +833,51 @@ end
 
 ps.PlayerAdded:Connect(p_added)
 end)
-  end
+  
+
+  -- blox fruits 1st sea  ends here
+ 
+  -- blox fruits 2nd sea starts here
+
+    elseif game.PlaceId == 4442272183 then 
+
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+    local Window = Library.CreateLib("Dreps Hub | Blox Fruits", "DarkTheme")
+
+    local MainTab = Window:NewTab("Main")
+
+    local FruitSection = MainTab:NewSection("Fruits")
+
+    local AbilitiesSection = MainTab:NewSection("Abilities")
+
+    AbilitiesSection:NewToggle("Auto Race Ability", "Auto use race ability", function(state)
+        if state then
+         getgenv().autoRace = true
+         spawn (function()
+            while getgenv().autoRace == true do
+         
+            local args = {
+                [1] = "ActivateAbility"
+            }
+            
+            game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+            wait()
+        end
+    end)
+        else
+            getgenv().autoRace = false
+            spawn (function()
+               while getgenv().autoRace == true do
+            
+               local args = {
+                   [1] = "ActivateAbility"
+               }
+               
+               game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+               wait()
+           end
+       end)
+        end
+    end)
+end
