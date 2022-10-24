@@ -1,156 +1,156 @@
 if game.PlaceId == 8579989858 then
       
       
-      -- Super Clicker Sim Starts here 
-       
-       
-       local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    -- Super Clicker Sim Starts here 
+     
+     
+     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-        local Window = Library.CreateLib("Dreps Hub", "DarkTheme")
+      local Window = Library.CreateLib("Dreps Hub", "DarkTheme")
 
-        local Main = Window:NewTab("Main")
+      local Main = Window:NewTab("Main")
 
-        local MainSection = Main:NewSection("Farm")
+      local MainSection = Main:NewSection("Farm")
 
-        MainSection:NewButton("Auto Click", "Automatically clicks for you.", function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/AANPLtM6'))()
-        end)
+      MainSection:NewButton("Auto Click", "Automatically clicks for you.", function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/AANPLtM6'))()
+      end)
 
-        MainSection:NewToggle("On/Off", "Turn auto clicker on and off", function(state)
-            if state then
-                loadstring(game:HttpGet('https://pastebin.com/raw/AANPLtM6'))()
-            else
-                loadstring(game:HttpGet('https://pastebin.com/raw/P1Gci503'))()
-            end
-        end)
-
-
-
-        MainSection:NewButton("Auto Rebirth", "Automatically rebirths for you.", function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/4J8NkYKy'))()
-        end)
-
-        MainSection:NewToggle("On/Off", "Turn auto rebirth on and off", function(state)
-            if state then
-                loadstring(game:HttpGet('https://pastebin.com/raw/BEfw1fc4'))()
-            else
-                loadstring(game:HttpGet('https://pastebin.com/raw/mQR1QQST'))()
-            end
-        end)
+      MainSection:NewToggle("On/Off", "Turn auto clicker on and off", function(state)
+          if state then
+              loadstring(game:HttpGet('https://pastebin.com/raw/AANPLtM6'))()
+          else
+              loadstring(game:HttpGet('https://pastebin.com/raw/P1Gci503'))()
+          end
+      end)
 
 
-        local Tab = Window:NewTab("Misc")
 
-        local TeleportsSection = Tab:NewSection("Teleport")
-    
-       
-        
-       
-        TeleportsSection:NewButton("Upgrades", "Teleport to upgrades shop.", function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/NXUjkz0v'))()
-        end)
+      MainSection:NewButton("Auto Rebirth", "Automatically rebirths for you.", function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/4J8NkYKy'))()
+      end)
 
-        TeleportsSection:NewButton("Skins", "if you get trapped turn on shiftlock).", function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/9sMkZ2FR'))()
-        end)
+      MainSection:NewToggle("On/Off", "Turn auto rebirth on and off", function(state)
+          if state then
+              loadstring(game:HttpGet('https://pastebin.com/raw/BEfw1fc4'))()
+          else
+              loadstring(game:HttpGet('https://pastebin.com/raw/mQR1QQST'))()
+          end
+      end)
 
-        TeleportsSection:NewButton("Ranks", "Teleport to ranks shop.", function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/6Xh9dVbz'))()
-        end)
 
-        TeleportsSection:NewButton("Rebirths", "Teleport to rebirth shop.", function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/R8yYtkiS'))()
-            end)
-        
-         TeleportsSection:NewButton("Spawn", "Teleport to spawn.", function()
-            loadstring(game:HttpGet('https://pastebin.com/raw/WkrvD0sW'))()
-            end)
-        
-        
-        
+      local Tab = Window:NewTab("Misc")
 
-        local IslandSection = Tab:NewSection("Island Teleports")
+      local TeleportsSection = Tab:NewSection("Teleport")
+  
+     
+      
+     
+      TeleportsSection:NewButton("Upgrades", "Teleport to upgrades shop.", function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/NXUjkz0v'))()
+      end)
 
-        IslandSection:NewButton("Crystal Island", "Teleport to Crystal Island", function() -- 1
-            loadstring(game:HttpGet('https://pastebin.com/raw/rD2jMzmT'))()
-        end)
+      TeleportsSection:NewButton("Skins", "if you get trapped turn on shiftlock).", function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/9sMkZ2FR'))()
+      end)
 
-        IslandSection:NewButton("Vulcan Island", "Teleport to Vulcan Island", function() -- 2 -- on this
-            loadstring(game:HttpGet('https://pastebin.com/raw/aJbgH8Kx'))()
-        end)
+      TeleportsSection:NewButton("Ranks", "Teleport to ranks shop.", function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/6Xh9dVbz'))()
+      end)
 
-        IslandSection:NewButton("Forest Island", "Teleport to Forest Island", function() -- 3
-            function teleportTO(placeCFrame)  --   
-                local plyr = game.Players.LocalPlayer
-                if plyr.Character then
-                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                end
-            end
-            teleportTO(game:GetService("Workspace").Islands.Island3.Union.CFrame) -- MUST HAVE CFrame
-        end)
-
-        IslandSection:NewButton("Angel Island", "Teleport to Angel Island", function() -- 4
-            function teleportTO(placeCFrame)  --   
-                local plyr = game.Players.LocalPlayer
-                if plyr.Character then
-                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                end
-            end
-            teleportTO(game:GetService("Workspace").Islands.Island4.Union.CFrame) -- MUST HAVE CFrame
-        end)
-
+      TeleportsSection:NewButton("Rebirths", "Teleport to rebirth shop.", function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/R8yYtkiS'))()
+          end)
+      
+       TeleportsSection:NewButton("Spawn", "Teleport to spawn.", function()
+          loadstring(game:HttpGet('https://pastebin.com/raw/WkrvD0sW'))()
+          end)
+      
+      
       
 
-        IslandSection:NewButton("Hacker Island", "Teleport to Hacker Island", function() -- 6 
-            function teleportTO(placeCFrame)  --   
-                local plyr = game.Players.LocalPlayer
-                if plyr.Character then
-                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                end
-            end
-            teleportTO(game:GetService("Workspace").Islands.Island6.Union.CFrame) -- MUST HAVE CFrame
-        end)
+      local IslandSection = Tab:NewSection("Island Teleports")
 
-        IslandSection:NewButton("Mythical Island", "Teleport to Mythical Island", function() -- 7 
-            function teleportTO(placeCFrame)  --   
-                local plyr = game.Players.LocalPlayer
-                if plyr.Character then
-                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                end
-            end
-            teleportTO(game:GetService("Workspace").Islands["Island 7"].Part.CFrame) -- MUST HAVE CFrame
-        end)
+      IslandSection:NewButton("Crystal Island", "Teleport to Crystal Island", function() -- 1
+          loadstring(game:HttpGet('https://pastebin.com/raw/rD2jMzmT'))()
+      end)
 
-        IslandSection:NewButton("Russo Island", "Teleport to Russo Island", function() -- 8
-            function teleportTO(placeCFrame)  --   
-                local plyr = game.Players.LocalPlayer
-                if plyr.Character then
-                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                end
-            end
-            teleportTO(game:GetService("Workspace").Portals["Russo Island"].Part.CFrame) -- MUST HAVE CFrame
-        end)
+      IslandSection:NewButton("Vulcan Island", "Teleport to Vulcan Island", function() -- 2 -- on this
+          loadstring(game:HttpGet('https://pastebin.com/raw/aJbgH8Kx'))()
+      end)
 
-        IslandSection:NewButton("Training Island", "Teleport to Training Island", function() -- 8
-            function teleportTO(placeCFrame)  --   
-                local plyr = game.Players.LocalPlayer
-                if plyr.Character then
-                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                end
-            end
-            teleportTO(game:GetService("Workspace").Portals["Training-Island"].Part.CFrame) -- MUST HAVE CFrame
-        end)
+      IslandSection:NewButton("Forest Island", "Teleport to Forest Island", function() -- 3
+          function teleportTO(placeCFrame)  --   
+              local plyr = game.Players.LocalPlayer
+              if plyr.Character then
+               plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+              end
+          end
+          teleportTO(game:GetService("Workspace").Islands.Island3.Union.CFrame) -- MUST HAVE CFrame
+      end)
 
-       
-       
-        MainSection:NewKeybind("Click to Toggle UI", "Right Control", Enum.KeyCode.RightControl, function()
-            Library:ToggleUI()
-        end)
+      IslandSection:NewButton("Angel Island", "Teleport to Angel Island", function() -- 4
+          function teleportTO(placeCFrame)  --   
+              local plyr = game.Players.LocalPlayer
+              if plyr.Character then
+               plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+              end
+          end
+          teleportTO(game:GetService("Workspace").Islands.Island4.Union.CFrame) -- MUST HAVE CFrame
+      end)
 
-        --Super Clicker Sim ends here
+    
 
-        -- Clicker Madness starts here
-    elseif game.PlaceId == 5490351219 then
+      IslandSection:NewButton("Hacker Island", "Teleport to Hacker Island", function() -- 6 
+          function teleportTO(placeCFrame)  --   
+              local plyr = game.Players.LocalPlayer
+              if plyr.Character then
+               plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+              end
+          end
+          teleportTO(game:GetService("Workspace").Islands.Island6.Union.CFrame) -- MUST HAVE CFrame
+      end)
+
+      IslandSection:NewButton("Mythical Island", "Teleport to Mythical Island", function() -- 7 
+          function teleportTO(placeCFrame)  --   
+              local plyr = game.Players.LocalPlayer
+              if plyr.Character then
+               plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+              end
+          end
+          teleportTO(game:GetService("Workspace").Islands["Island 7"].Part.CFrame) -- MUST HAVE CFrame
+      end)
+
+      IslandSection:NewButton("Russo Island", "Teleport to Russo Island", function() -- 8
+          function teleportTO(placeCFrame)  --   
+              local plyr = game.Players.LocalPlayer
+              if plyr.Character then
+               plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+              end
+          end
+          teleportTO(game:GetService("Workspace").Portals["Russo Island"].Part.CFrame) -- MUST HAVE CFrame
+      end)
+
+      IslandSection:NewButton("Training Island", "Teleport to Training Island", function() -- 8
+          function teleportTO(placeCFrame)  --   
+              local plyr = game.Players.LocalPlayer
+              if plyr.Character then
+               plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+              end
+          end
+          teleportTO(game:GetService("Workspace").Portals["Training-Island"].Part.CFrame) -- MUST HAVE CFrame
+      end)
+
+     
+     
+      MainSection:NewKeybind("Click to Toggle UI", "Right Control", Enum.KeyCode.RightControl, function()
+          Library:ToggleUI()
+      end)
+
+      --Super Clicker Sim ends here
+
+      -- Clicker Madness starts here
+  elseif game.PlaceId == 5490351219 then
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
 local Window = Library.CreateLib("Dreps Hub | Clicker Madness", "DarkTheme")
@@ -160,52 +160,52 @@ local FarmTab = Window:NewTab("Farm")
 local FarmSection = FarmTab:NewSection("Clicks and Rebirths")
 
 FarmSection:NewToggle("Auto Click", "Automatically Clicks for you", function(state)
-    if state then
-        getgenv().autoClick = true
+  if state then
+      getgenv().autoClick = true
 
 spawn(function()
-    while getgenv().autoClick == true do
+  while getgenv().autoClick == true do
 local clickMod = require(game:GetService("Players")["LocalPlayer"].PlayerScripts.Aero.Controllers.UI.Click)
 clickMod:Click()
 wait()
 end
 end)
-    else
-        getgenv().autoClick = false
+  else
+      getgenv().autoClick = false
 
-        spawn(function()
-            while getgenv().autoClick == true do
-                local clickMod = require(game:GetService("Players")["LocalPlayer"].PlayerScripts.Aero.Controllers.UI.Click)
-                clickMod:Click()
-        wait()
-        end
-        end)
-    end
+      spawn(function()
+          while getgenv().autoClick == true do
+              local clickMod = require(game:GetService("Players")["LocalPlayer"].PlayerScripts.Aero.Controllers.UI.Click)
+              clickMod:Click()
+      wait()
+      end
+      end)
+  end
 end)
 
 
 FarmSection:NewToggle("Auto Rebirth", "Automatically Rebirths for you", function(state)
-    if state then
-        getgenv().autoRebirth = true
-        spawn (function()
-        
-            while getgenv().autoRebirth == true do
-            local args = {
-            [1] = 5800
-        }
-        
-        game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
-        
-        wait()
-        end
-        end)
-    else
-        getgenv().autoRebirth  = false
+  if state then
+      getgenv().autoRebirth = true
+      spawn (function()
+      
+          while getgenv().autoRebirth == true do
+          local args = {
+          [1] = 5800
+      }
+      
+      game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+      
+      wait()
+      end
+      end)
+  else
+      getgenv().autoRebirth  = false
 spawn (function()
 
-    while getgenv().autoRebirth == true do
-    local args = {
-    [1] = 1000
+  while getgenv().autoRebirth == true do
+  local args = {
+  [1] = 1000
 }
 
 game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
@@ -213,16 +213,106 @@ game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyR
 wait()
 end
 end)
+  end
+end)
+
+local BunnySection = FarmTab:NewSection("Easter")
+
+--auto buy easter egg start here
+
+
+
+-- auto bunny start here       
+BunnySection:NewToggle("Auto Easter Bunny", "Auto Farm Eggs to summon easter egg", function(state)
+    if state then
+        getgenv().autoBunnyTP = true
+spawn (function()
+    while getgenv().autoBunnyTP == true do
+function teleportTO(placeCFrame)
+    local plyr = game.Players.LocalPlayer
+    if plyr.Character then
+     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+    end
+end
+teleportTO(CFrame.new(797, 9, -264))
+wait()
+
+
+
+        local clickMod = require(game:GetService("Players")["LocalPlayer"].PlayerScripts.Aero.Controllers.UI.Click)
+                clickMod:Click()
+        wait()
+end
+end)
+    else
+        getgenv().autoBunnyTP = false
+spawn (function()
+    while getgenv().autoBunnyTP == true do
+function teleportTO(placeCFrame)
+    local plyr = game.Players.LocalPlayer
+    if plyr.Character then
+     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+    end
+end
+teleportTO(CFrame.new(797, 9, -264))
+wait()
+end
+end)
+
+
+        local clickMod = require(game:GetService("Players")["LocalPlayer"].PlayerScripts.Aero.Controllers.UI.Click)
+                clickMod:Click()
+              
+        wait()
+    
     end
 end)
 
 
 
+
+--auto bunny end here
+
+--auto easter egg start here 
+
+BunnySection:NewToggle("Auto Summon Easter Egg", "Will auto summon easter eggs.", function(state)
+    if state then
+      getgenv().autoEasterEgg  = true
+      spawn(function()
+        while getgenv().autoEasterEgg == true do
+
+local args = {
+    [1] = "easter"
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+wait()
+end
+end)
+
+    else
+        getgenv().autoEasterEgg  = false
+        spawn(function()
+          while getgenv().autoEasterEgg == true do
+  
+  local args = {
+      [1] = "easter"
+  }
+  
+  game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
+  wait()
+  end
+  end)
+    end
+end)
+
+--auto easter egg end here
+
 local LocalTab = Window:NewTab("Local Player")
 
 local LocalSection = LocalTab:NewSection("Teleports")
 
-   
+ 
 -- walkspeed and jump power start here
 
 
@@ -232,16 +322,16 @@ local PlayerSection = LocalTab:NewSection("Player")
 PlayerSection:NewLabel("Hard to see but there is a slider.")
 
 PlayerSection:NewSlider("WalkSpeed", "Go fast", 500, 16, function(s) 
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
 PlayerSection:NewSlider("Jumppower", "Jump high", 350, 50, function(s)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+  game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
 
 PlayerSection:NewButton("Reset JumpPower/WalkSpeed", "Resets jump and walk to normal speed.", function()
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+  game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
 end)
 -- walkspeed/jumppower ends here
 
@@ -252,216 +342,179 @@ end)
 
 LocalSection:NewDropdown("Teleport Islands 1", "Teleport to Islands", {"Lava Island","Desert Island","Winter Island"}, function(SelectedLocation)
 
-    if SelectedLocation == "Lava Island" then
-        
-            function teleportTO(placeCFrame)  --   
-                local plyr = game.Players.LocalPlayer
-                if plyr.Character then
-                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                end
-            end
-            teleportTO(game:GetService("Workspace").Worlds.Lava.Teleport.CFrame)
-    elseif SelectedLocation == "Desert Island" then
-        function teleportTO(placeCFrame)  --   
-            local plyr = game.Players.LocalPlayer
-            if plyr.Character then
-             plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-            end
-        end
-        teleportTO(game:GetService("Workspace").Worlds.Desert.Teleport.CFrame)
-    elseif SelectedLocation == "Winter Island" then
-        function teleportTO(placeCFrame)  --   
-            local plyr = game.Players.LocalPlayer
-            if plyr.Character then
-             plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-            end
-        end
-        teleportTO(game:GetService("Workspace").Worlds.Winter.Teleport.CFrame)
-        end
-    end)
+  if SelectedLocation == "Lava Island" then
+      
+          function teleportTO(placeCFrame)  --   
+              local plyr = game.Players.LocalPlayer
+              if plyr.Character then
+               plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+              end
+          end
+          teleportTO(game:GetService("Workspace").Worlds.Lava.Teleport.CFrame)
+  elseif SelectedLocation == "Desert Island" then
+      function teleportTO(placeCFrame)  --   
+          local plyr = game.Players.LocalPlayer
+          if plyr.Character then
+           plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+          end
+      end
+      teleportTO(game:GetService("Workspace").Worlds.Desert.Teleport.CFrame)
+  elseif SelectedLocation == "Winter Island" then
+      function teleportTO(placeCFrame)  --   
+          local plyr = game.Players.LocalPlayer
+          if plyr.Character then
+           plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+          end
+      end
+      teleportTO(game:GetService("Workspace").Worlds.Winter.Teleport.CFrame)
+      end
+  end)
 
 
 
-    
-    
-        LocalSection:NewDropdown("Teleport Islands 2", "Teleport to Islands", {"Toxic Island","Ocean Island","Candy Island"}, function(SelectedLocation)
-            if SelectedLocation == "Toxic Island" then
-                function teleportTO(placeCFrame)  --   
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Toxic.Teleport.CFrame)
-            elseif SelectedLocation == "Ocean Island" then
-                function teleportTO(placeCFrame)  --   
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Ocean.Teleport.CFrame)
-            elseif SelectedLocation == "Candy Island" then
-                function teleportTO(placeCFrame)  --   
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Candy.Teleport.CFrame)
-            end
-         end)
-         LocalSection:NewDropdown("Teleport Islands 3", "Teleport to Islands", {"Space Island","Forest Island","City Island"}, function(SelectedLocation)
-            if SelectedLocation == "Space Island" then
-                function teleportTO(placeCFrame)  --   
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Space.Teleport.CFrame)
-            elseif SelectedLocation == "Forest Island" then
-                function teleportTO(placeCFrame)  --   
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Forest.Teleport.CFrame)
-            elseif SelectedLocation == "City Island" then
-                function teleportTO(placeCFrame)  --   
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.City.Teleport.CFrame)
-            end
-         end)
-         LocalSection:NewDropdown("Teleport Islands 4", "Teleport to Islands", {"Blocks Island","Future Island","Infinity Island"}, function(SelectedLocation)
-            if SelectedLocation == "Blocks Island" then
-                function teleportTO(placeCFrame)  --   
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Blocks.Teleport.CFrame)
-            elseif SelectedLocation == "Future Island" then
-                function teleportTO(placeCFrame)  
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Future.Teleport.CFrame)
-            elseif SelectedLocation == "Infinity Island" then
-                function teleportTO(placeCFrame) 
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Infinity.Teleport.CFrame)
-            end
-         end)
+  
+  
+      LocalSection:NewDropdown("Teleport Islands 2", "Teleport to Islands", {"Toxic Island","Ocean Island","Candy Island"}, function(SelectedLocation)
+          if SelectedLocation == "Toxic Island" then
+              function teleportTO(placeCFrame)  --   
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Toxic.Teleport.CFrame)
+          elseif SelectedLocation == "Ocean Island" then
+              function teleportTO(placeCFrame)  --   
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Ocean.Teleport.CFrame)
+          elseif SelectedLocation == "Candy Island" then
+              function teleportTO(placeCFrame)  --   
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Candy.Teleport.CFrame)
+          end
+       end)
+       LocalSection:NewDropdown("Teleport Islands 3", "Teleport to Islands", {"Space Island","Forest Island","City Island"}, function(SelectedLocation)
+          if SelectedLocation == "Space Island" then
+              function teleportTO(placeCFrame)  --   
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Space.Teleport.CFrame)
+          elseif SelectedLocation == "Forest Island" then
+              function teleportTO(placeCFrame)  --   
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Forest.Teleport.CFrame)
+          elseif SelectedLocation == "City Island" then
+              function teleportTO(placeCFrame)  --   
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.City.Teleport.CFrame)
+          end
+       end)
+       LocalSection:NewDropdown("Teleport Islands 4", "Teleport to Islands", {"Blocks Island","Future Island","Infinity Island"}, function(SelectedLocation)
+          if SelectedLocation == "Blocks Island" then
+              function teleportTO(placeCFrame)  --   
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Blocks.Teleport.CFrame)
+          elseif SelectedLocation == "Future Island" then
+              function teleportTO(placeCFrame)  
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Future.Teleport.CFrame)
+          elseif SelectedLocation == "Infinity Island" then
+              function teleportTO(placeCFrame) 
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Infinity.Teleport.CFrame)
+          end
+       end)
 
-         LocalSection:NewDropdown("Teleport Islands 5", "Teleport to Islands", {"Moon Island","Fire Island","Storm Island"}, function(SelectedLocation)
-            if SelectedLocation == "Moon Island" then
-                function teleportTO(placeCFrame) 
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Moon.Teleport.CFrame)
-            elseif SelectedLocation == "Fire Island" then
-                function teleportTO(placeCFrame)  
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Fire.Teleport.CFrame)
-            elseif SelectedLocation == "Storm Island" then
-                function teleportTO(placeCFrame)  
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Storm.Teleport.CFrame)
-            end
-         end)
-      LocalSection:NewDropdown("Teleport Islands 6", "Teleport to Islands", {"Dominus Island"}, function(SelectedLocation)
-            if SelectedLocation == "Dominus Island" then
+       LocalSection:NewDropdown("Teleport Islands 5", "Teleport to Islands", {"Moon Island","Fire Island","Storm Island"}, function(SelectedLocation)
+          if SelectedLocation == "Moon Island" then
+              function teleportTO(placeCFrame) 
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Moon.Teleport.CFrame)
+          elseif SelectedLocation == "Fire Island" then
+              function teleportTO(placeCFrame)  
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Fire.Teleport.CFrame)
+          elseif SelectedLocation == "Storm Island" then
+              function teleportTO(placeCFrame)  
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Storm.Teleport.CFrame)
+          end
+       end)
+    LocalSection:NewDropdown("Teleport Islands 6", "Teleport to Islands", {"Dominus Island"}, function(SelectedLocation)
+          if SelectedLocation == "Dominus Island" then
 
-              
-                function teleportTO(placeCFrame)  
-                    local plyr = game.Players.LocalPlayer
-                    if plyr.Character then
-                     plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-                    end
-                end
-                teleportTO(game:GetService("Workspace").Worlds.Dominus.Teleport.CFrame)
-            end
-         end)
-
-         local SummonTab = Window:NewTab("Summon")
+            
+              function teleportTO(placeCFrame)  
+                  local plyr = game.Players.LocalPlayer
+                  if plyr.Character then
+                   plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                  end
+              end
+              teleportTO(game:GetService("Workspace").Worlds.Dominus.Teleport.CFrame)
+          end
+       end)
 
 
-         -- Script generated by SimpleSpy - credits to exx#9394
- 
-         local SummonSection = SummonTab:NewSection("Eggs")
-         
-         SummonSection:NewToggle("Summon Egg", "Go to script and change to egg type you want", function(state)
-             if state then
-                 getgenv().autoSummon = true
- spawn (function()
- while getgenv().autoSummon == true do 
- 
- 
- local args = {
-     [1] = "winter" -- CHANGE TO WHATEVER TYPE OF EGG YOU WANT
- }
- 
- game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
- wait()
- end
- end)
-             else
-                 getgenv().autoSummon = false
- spawn (function()
- while getgenv().autoSummon == true do 
- 
- 
- local args = {
-     [1] = "desert" 
- }
- 
- game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase:FireServer(unpack(args))
- wait()
- end
- end)
-             end
-         end)
-         
-         
-         local SettingsTab = Window:NewTab("Settings")
+       
+       
+       local SettingsTab = Window:NewTab("Settings")
 
-         local UISection = SettingsTab:NewSection("Toggle GUI")
+       local UISection = SettingsTab:NewSection("Toggle GUI")
 
-         
-         UISection:NewKeybind("Toggle UI Button", "Don't Change the Keybind", Enum.KeyCode.RightControl, function()
-            Library:ToggleUI()
-        end)
+       
+       UISection:NewKeybind("Toggle UI Button", "Don't Change the Keybind", Enum.KeyCode.RightControl, function()
+          Library:ToggleUI()
+      end)
 
 
-    
+  
 -- Clicker Madness ends here
 
-    elseif game.PlaceId == 2753915549 then
-        wait(1.2)
+  elseif game.PlaceId == 2753915549 then
+      wait(1.2)
 game.StarterGui:SetCore("SendNotification", {
 Title = "JOIN"; -- the title (ofc)
 Text = "https://discord.gg/TngrGTXEhB"; -- what the text says (ofc)
@@ -496,160 +549,160 @@ local Teleports = Main:NewSection("Teleports")
 Teleports:NewLabel("Script will reset character when you get to location.")
 
 Teleports:NewButton("Sky Island 2", "You may have to click 2-3 times", function()
-    function teleportTO(placeCFrame)  --   
-        local plyr = game.Players.LocalPlayer
-        if plyr.Character then
-         plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-        end
-    end
-    teleportTO(CFrame.new(-4649, 868, -1721)) -- portal coords (works with sky portal and fish portal)
+  function teleportTO(placeCFrame)  --   
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+       plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+      end
+  end
+  teleportTO(CFrame.new(-4649, 868, -1721)) -- portal coords (works with sky portal and fish portal)
 end)
 
 Teleports:NewButton("Underwater City", "You may have to click 2-3 times", function()
-    function teleportTO(placeCFrame)  --   
-        local plyr = game.Players.LocalPlayer
-        if plyr.Character then
-         plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
-        end
-    end
-    teleportTO(CFrame.new(61170, 1, 1916)) -- portal coords (works with sky portal and fish portal)
-    
+  function teleportTO(placeCFrame)  --   
+      local plyr = game.Players.LocalPlayer
+      if plyr.Character then
+       plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+      end
+  end
+  teleportTO(CFrame.new(61170, 1, 1916)) -- portal coords (works with sky portal and fish portal)
+  
 end)
 
 Teleports:NewButton("Jungle", "Tween to jungle", function()
-    local teleport_table = {
-        location1 = Vector3.new(-1250, 12, 341), -- your desired position
-        
-    }
-    
-    local tween_s = game:GetService('TweenService')
-    local tweeninfo = TweenInfo.new(14,Enum.EasingStyle.Linear)
-    
-    local lp = game.Players.LocalPlayer
-    
-    function bypass_teleport(v)
-        if lp.Character and 
-        lp.Character:FindFirstChild('HumanoidRootPart') then
-            local cf = CFrame.new(v)
-            local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
-            a:Play()
-            -- a.Completed:Wait()
-            -- print('Teleporting Done!')
-            a.Completed:Wait(0)
-            game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        end
-    end
-    
-    bypass_teleport(teleport_table.location1)
-   
+  local teleport_table = {
+      location1 = Vector3.new(-1250, 12, 341), -- your desired position
+      
+  }
+  
+  local tween_s = game:GetService('TweenService')
+  local tweeninfo = TweenInfo.new(14,Enum.EasingStyle.Linear)
+  
+  local lp = game.Players.LocalPlayer
+  
+  function bypass_teleport(v)
+      if lp.Character and 
+      lp.Character:FindFirstChild('HumanoidRootPart') then
+          local cf = CFrame.new(v)
+          local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+          a:Play()
+          -- a.Completed:Wait()
+          -- print('Teleporting Done!')
+          a.Completed:Wait(0)
+          game.Players.LocalPlayer.Character.Humanoid.Health = 0
+      end
+  end
+  
+  bypass_teleport(teleport_table.location1)
+ 
 end)
 
 Teleports:NewButton("Pirate Village", "Tween to Pirate Village", function()
-    local teleport_table = {
-        location1 = Vector3.new(-1122, 5, 3856), -- your desired position
-        
-    }
-    
-    local tween_s = game:GetService('TweenService')
-    local tweeninfo = TweenInfo.new(15,Enum.EasingStyle.Linear)
-    
-    local lp = game.Players.LocalPlayer
-    
-    function bypass_teleport(v)
-        if lp.Character and 
-        lp.Character:FindFirstChild('HumanoidRootPart') then
-            local cf = CFrame.new(v)
-            local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
-            a:Play()
-            -- a.Completed:Wait()
-            -- print('Teleporting Done!')
-            a.Completed:Wait(0)
-            game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        end
-    end
-    
-    bypass_teleport(teleport_table.location1)
+  local teleport_table = {
+      location1 = Vector3.new(-1122, 5, 3856), -- your desired position
+      
+  }
+  
+  local tween_s = game:GetService('TweenService')
+  local tweeninfo = TweenInfo.new(15,Enum.EasingStyle.Linear)
+  
+  local lp = game.Players.LocalPlayer
+  
+  function bypass_teleport(v)
+      if lp.Character and 
+      lp.Character:FindFirstChild('HumanoidRootPart') then
+          local cf = CFrame.new(v)
+          local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+          a:Play()
+          -- a.Completed:Wait()
+          -- print('Teleporting Done!')
+          a.Completed:Wait(0)
+          game.Players.LocalPlayer.Character.Humanoid.Health = 0
+      end
+  end
+  
+  bypass_teleport(teleport_table.location1)
 end)
 
 Teleports:NewButton("Desert", "Tween to Desert", function()
-    local teleport_table = {
-        location1 = Vector3.new(1094, 7, 4193), -- your desired position
-        
-    }
-    
-    local tween_s = game:GetService('TweenService')
-    local tweeninfo = TweenInfo.new(16,Enum.EasingStyle.Linear)
-    
-    local lp = game.Players.LocalPlayer
-    
-    function bypass_teleport(v)
-        if lp.Character and 
-        lp.Character:FindFirstChild('HumanoidRootPart') then
-            local cf = CFrame.new(v)
-            local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
-            a:Play()
-            -- a.Completed:Wait()
-            -- print('Teleporting Done!')
-            a.Completed:Wait(0)
-            game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        end
-    end
-    
-    bypass_teleport(teleport_table.location1)
+  local teleport_table = {
+      location1 = Vector3.new(1094, 7, 4193), -- your desired position
+      
+  }
+  
+  local tween_s = game:GetService('TweenService')
+  local tweeninfo = TweenInfo.new(16,Enum.EasingStyle.Linear)
+  
+  local lp = game.Players.LocalPlayer
+  
+  function bypass_teleport(v)
+      if lp.Character and 
+      lp.Character:FindFirstChild('HumanoidRootPart') then
+          local cf = CFrame.new(v)
+          local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+          a:Play()
+          -- a.Completed:Wait()
+          -- print('Teleporting Done!')
+          a.Completed:Wait(0)
+          game.Players.LocalPlayer.Character.Humanoid.Health = 0
+      end
+  end
+  
+  bypass_teleport(teleport_table.location1)
 end)
 
 Teleports:NewButton("Fountain City", "Tween to Fountain City", function()
-    local teleport_table = {
-        location1 = Vector3.new(5133, 5, 4038), -- your desired position
-        
-    }
-    
-    local tween_s = game:GetService('TweenService')
-    local tweeninfo = TweenInfo.new(14,Enum.EasingStyle.Linear)
-    
-    local lp = game.Players.LocalPlayer
-    
-    function bypass_teleport(v)
-        if lp.Character and 
-        lp.Character:FindFirstChild('HumanoidRootPart') then
-            local cf = CFrame.new(v)
-            local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
-            a:Play()
-            -- a.Completed:Wait()
-            -- print('Teleporting Done!')
-            a.Completed:Wait(0)
-            game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        end
-    end
-    
-    bypass_teleport(teleport_table.location1)
+  local teleport_table = {
+      location1 = Vector3.new(5133, 5, 4038), -- your desired position
+      
+  }
+  
+  local tween_s = game:GetService('TweenService')
+  local tweeninfo = TweenInfo.new(14,Enum.EasingStyle.Linear)
+  
+  local lp = game.Players.LocalPlayer
+  
+  function bypass_teleport(v)
+      if lp.Character and 
+      lp.Character:FindFirstChild('HumanoidRootPart') then
+          local cf = CFrame.new(v)
+          local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+          a:Play()
+          -- a.Completed:Wait()
+          -- print('Teleporting Done!')
+          a.Completed:Wait(0)
+          game.Players.LocalPlayer.Character.Humanoid.Health = 0
+      end
+  end
+  
+  bypass_teleport(teleport_table.location1)
 end)
 
 Teleports:NewButton("Marine Starter", "Will set spawn at Pirate island", function()
-    local teleport_table = {
-        location1 = Vector3.new(-2573, 7, 2047), -- your desired position
-      
-    }
+  local teleport_table = {
+      location1 = Vector3.new(-2573, 7, 2047), -- your desired position
     
-    local tween_s = game:GetService('TweenService')
-    local tweeninfo = TweenInfo.new(14,Enum.EasingStyle.Linear)
-    
-    local lp = game.Players.LocalPlayer
-    
-    function bypass_teleport(v)
-        if lp.Character and 
-        lp.Character:FindFirstChild('HumanoidRootPart') then
-            local cf = CFrame.new(v)
-            local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
-            a:Play()
-            -- a.Completed:Wait()
-            -- print('Teleporting Done!')
-            a.Completed:Wait(0)
-            game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        end
-    end
-    
-    bypass_teleport(teleport_table.location1)
+  }
+  
+  local tween_s = game:GetService('TweenService')
+  local tweeninfo = TweenInfo.new(14,Enum.EasingStyle.Linear)
+  
+  local lp = game.Players.LocalPlayer
+  
+  function bypass_teleport(v)
+      if lp.Character and 
+      lp.Character:FindFirstChild('HumanoidRootPart') then
+          local cf = CFrame.new(v)
+          local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+          a:Play()
+          -- a.Completed:Wait()
+          -- print('Teleporting Done!')
+          a.Completed:Wait(0)
+          game.Players.LocalPlayer.Character.Humanoid.Health = 0
+      end
+  end
+  
+  bypass_teleport(teleport_table.location1)
 end)
 
 local NewMain = Window:NewTab("Main") -- NewMain is the tab
@@ -688,9 +741,9 @@ esp.TextColor3 = Color3.fromRGB(esp_settings.colour) -- text colour
 
 game:GetService("RunService").RenderStepped:Connect(function() ---- loops faster than a while loop :)
 for i,v in pairs (game:GetService("Players"):GetPlayers()) do
-    if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil  then -- craeting checks for team check, local player etc
-        esp.Text = "{"..v.Name.."}"
-        gui:Clone().Parent = v.Character.Head
+  if v ~= game:GetService("Players").LocalPlayer and v.Character.Head:FindFirstChild("Cracked esp")==nil  then -- craeting checks for team check, local player etc
+      esp.Text = "{"..v.Name.."}"
+      gui:Clone().Parent = v.Character.Head
 end
 end
 end)
@@ -702,82 +755,82 @@ local lp = ps.LocalPlayer
 local rs = game:GetService("RunService")
 
 local function getdistancefc(part)
-    return (part.Position - c.CFrame.Position).Magnitude
+  return (part.Position - c.CFrame.Position).Magnitude
 end
 
 local function esp(p,cr)
-    local h = cr:WaitForChild("Humanoid")
-    local hrp = cr:WaitForChild("HumanoidRootPart")
+  local h = cr:WaitForChild("Humanoid")
+  local hrp = cr:WaitForChild("HumanoidRootPart")
 
-    local text = Drawing.new("Text")
-    text.Visible = false
-    text.Center = true 
-    text.Outline = true 
-    text.Font = 2
-    text.Color = Color3.fromRGB(255,255,255)
-    text.Size = 13
+  local text = Drawing.new("Text")
+  text.Visible = false
+  text.Center = true 
+  text.Outline = true 
+  text.Font = 2
+  text.Color = Color3.fromRGB(255,255,255)
+  text.Size = 13
 
-    local c1 
-    local c2 
-    local c3 
+  local c1 
+  local c2 
+  local c3 
 
-    local function dc()
-        text.Visible = false
-        text:Remove()
-        if c1 then
-            c1:Disconnect()
-            c1 = nil 
-        end
-        if c2 then
-            c2:Disconnect()
-            c2 = nil 
-        end
-        if c3 then
-            c3:Disconnect()
-            c3 = nil 
-        end
-    end
+  local function dc()
+      text.Visible = false
+      text:Remove()
+      if c1 then
+          c1:Disconnect()
+          c1 = nil 
+      end
+      if c2 then
+          c2:Disconnect()
+          c2 = nil 
+      end
+      if c3 then
+          c3:Disconnect()
+          c3 = nil 
+      end
+  end
 
-    c2 = cr.AncestryChanged:Connect(function(_,parent)
-        if not parent then
-            dc()
-        end
-    end)
+  c2 = cr.AncestryChanged:Connect(function(_,parent)
+      if not parent then
+          dc()
+      end
+  end)
 
-    c3 = h.HealthChanged:Connect(function(v)
-        if (v<=0) or (h:GetState() == Enum.HumanoidStateType.Dead) then
-            dc()
-        end
-    end)
+  c3 = h.HealthChanged:Connect(function(v)
+      if (v<=0) or (h:GetState() == Enum.HumanoidStateType.Dead) then
+          dc()
+      end
+  end)
 
-    c1 = rs.RenderStepped:Connect(function()
-        local hrp_pos,hrp_os = c:WorldToViewportPoint(hrp.Position)
-        if hrp_os then
-            text.Position = Vector2.new(hrp_pos.X,hrp_pos.Y)
-            text.Text = p.Name .. ' ('..tostring(math.floor(getdistancefc(hrp)))..' ms)'
-            text.Visible = true 
-        else
-            text.Visible = false 
-        end
-    end)
+  c1 = rs.RenderStepped:Connect(function()
+      local hrp_pos,hrp_os = c:WorldToViewportPoint(hrp.Position)
+      if hrp_os then
+          text.Position = Vector2.new(hrp_pos.X,hrp_pos.Y)
+          text.Text = p.Name .. ' ('..tostring(math.floor(getdistancefc(hrp)))..' ms)'
+          text.Visible = true 
+      else
+          text.Visible = false 
+      end
+  end)
 end
 
 local function p_added(p)
-    if p.Character then
-        esp(p,p.Character)
-    end
-    p.CharacterAdded:Connect(function(cr)
-        esp(p,cr)
-    end)
+  if p.Character then
+      esp(p,p.Character)
+  end
+  p.CharacterAdded:Connect(function(cr)
+      esp(p,cr)
+  end)
 end
 
 
 for i,p in next, ps:GetPlayers() do 
-    if p ~= lp then
-        p_added(p)
-    end
+  if p ~= lp then
+      p_added(p)
+  end
 end
 
 ps.PlayerAdded:Connect(p_added)
 end)
-    end
+  end
