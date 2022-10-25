@@ -538,7 +538,7 @@ Duration = 7; -- how long the notification should in secounds
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/drepdmoney/BackupUI/main/backuilua"))()
 
-local Window = Library.CreateLib("Dreps Hub | Blox Fruits", "Ocean")
+local Window = Library.CreateLib("Dreps Hub | Blox Fruits", "DarkTheme")
 
 
 local Main = Window:NewTab("Player")
@@ -705,10 +705,10 @@ Teleports:NewButton("Marine Starter", "Will set spawn at Pirate island", functio
   bypass_teleport(teleport_table.location1)
 end)
 
-local NewMain = Window:NewTab("Main") -- NewMain is the tab
 
 
-local ESPSection = NewMain:NewSection("ESP")
+
+local ESPSection = Main:NewSection("ESP")
 
 ESPSection:NewButton("Player ESP", "SOMETIMES you have to be close to players to work", function()
 
@@ -835,6 +835,2568 @@ ps.PlayerAdded:Connect(p_added)
 end)
   
 
+    local MainTab = Window:NewTab("Main")
+
+    
+
+     
+    local CousinSection = MainTab:NewSection("Blox Fruit Dealer Cousin")
+    CousinSection:NewToggle("Auto Blox Fruit Cousin", "Auto buy blox fruit cousin every 2 hours", function(state)
+
+    
+        if state then
+            getgenv().autoCousin = true
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        else
+            getgenv().autoCousin = false
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        end
+    end)
+
+
+
+
+    -- auto blox fruit dealer start
+
+local FruitSection = MainTab:NewSection("Blox Fruit Dealer")
+FruitSection:NewLabel("Auto buy will replace your current fruit.") 
+FruitSection:NewToggle("Auto Buy Kilo", "Auto Buy Kilo", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spin", "Auto Buy Spin", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spin-Spin", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Chop", "Auto Buy Chop", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Chop-Chop", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spring", "Auto Buy Spring", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spring-Spring", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spike", "Auto Buy Spike", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spike-Spike", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Flame", "Auto Buy Flame", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Flame-Flame", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Falcon", "Auto Buy Falcon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Falcon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Ice", "Auto Buy Ice", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Ice-Ice", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Sand", "Auto Buy Sand", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Sand-Sand", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Revive", "Auto Buy Revive", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Revive-Revive", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dark", "Auto Buy Dark", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dark-Dark", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+FruitSection:NewToggle("Auto Buy Diamond", "Auto Buy Diamond", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Diamond-Diamond", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Light", "Auto Buy Light", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Light-Light", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Love", "Auto Buy Love", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Love-Love", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rubber", "Auto Buy Rubber", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rubber-Rubber", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Barrier", "Auto Buy Barrier", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Barrier-Barrier", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Magma", "Auto Buy Magma", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Door", "Auto Buy Door", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Door-Door", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Quake", "Auto Buy Quake", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Quake-Quake", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Buddha", "Auto Buy Buddha", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Human-Human:Buddha", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy String", "Auto Buy String", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "String-String", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Phoenix", "Auto Buy Phoenix", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Phoenix", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rumble", "Auto Buy Rumble", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rumble-Rumble", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Paw", "Auto Buy Paw", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Paw-Paw", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Gravity", "Auto Buy Gravity", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Gravity-Gravity", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dough", "Auto Buy Dough", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dough-Dough", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Shadow", "Auto Buy Shadow", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Shadow-Shadow", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Venom", "Auto Buy Venom", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Venom-Venom", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Control", "Auto Buy Control", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Control-Control", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Soul", "Auto Buy Soul", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Soul-Soul", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dragon", "Auto Buy Dragon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dragon-Dragon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Leopard", "Auto Buy Leopard", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Leopard-Leopard", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+
+
+
+-- auto blox fruit dealer end
+local NewPlayerTab = Window:NewTab("Local Player")
+
+local NewPlayerSection = NewPlayerTab:NewSection("Race")
+
+NewPlayerSection:NewToggle("Auto Race Ability", "Auto use race ability", function(state)
+    if state then
+       getgenv().autoRace = true
+
+       spawn (function()
+        while getgenv().autoRace == true do
+       
+       
+        local args = {
+            [1] = "ActivateAbility"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+        wait()
+    end
+end)
+    else
+        getgenv().autoRace = false
+
+        spawn (function()
+         while getgenv().autoRace == true do
+        
+        
+         local args = {
+             [1] = "ActivateAbility"
+         }
+         
+         game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+         wait()
+     end
+ end)
+    end
+end)
+-- auto race end 
+--shop start 
+local ShopTab = Window:NewTab("Shop")
+local FightingStyleTab = ShopTab:NewSection("Fighting Styles")
+
+FightingStyleTab:NewButton("Death Step", "Buy Death Step", function()
+    local args = {
+        [1] = "BuyDeathStep" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dark Step", "Buy Dark Step", function()
+local args = {
+    [1] = "BuyBlackLeg"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric", "Buy Electric", function()
+    local args = {
+        [1] = "BuyElectro" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric Claw", "Buy Electric Claw", function()
+    local args = {
+        [1] = "BuyElectricClaw" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Water Kung Fu", "Buy Water Kung Fu", function()
+    local args = {
+        [1] = "BuyFishmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Sharkman Karate", "Buy Sharkman Karate", function()
+    local args = {
+        [1] = "BuySharkmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+
+FightingStyleTab:NewButton("Superhuman", "Buy Superhuman", function()
+    local args = {
+        [1] = "BuySuperhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Goduman", "Buy Godhuman", function()
+    local args = {
+        [1] = "BuyGodhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Dragon Breath", "Buy Dragon Breath", function()
+    local args = {
+        [1] = "BlackbeardReward",
+        [2] = "DragonClaw",
+        [3] = "2"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dragon Talon", "Buy Dragon Talon", function()
+    local args = {
+        [1] = "BuyDragonTalon"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+local HakiSection = ShopTab:NewSection("Haki")
+
+HakiSection:NewButton("Skyjump", "Buy Skyjump", function()
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Geppo"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Enhancement", "Buy Enhancement", function()
+   
+
+local args = {
+    [1] = "BuyHaki",
+    [2] = "Buso"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Soru", "Buy Soru", function()
+   
+
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Soru"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    end)
+
+
+
+
+
+-- shop end
+local Tab2 = Window:NewTab("Settings")
+
+local Section2 = Tab2:NewSection("Toggle GUI")
+
+Section2:NewKeybind("Click to Toggle UI", " ", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+
+
+    elseif game.PlaceId == 4442272183 then
+    
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/drepdmoney/BackupUI/main/backuilua"))()
+
+    local Window = Library.CreateLib("Dreps Hub | Blox Fruits", "DarkTheme")
+
+    local MainTab = Window:NewTab("Main")
+
+    
+
+     
+    local CousinSection = MainTab:NewSection("Blox Fruit Dealer Cousin")
+    CousinSection:NewToggle("Auto Blox Fruit Cousin", "Auto buy blox fruit cousin every 2 hours", function(state)
+
+    
+        if state then
+            getgenv().autoCousin = true
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        else
+            getgenv().autoCousin = false
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        end
+    end)
+
+
+
+
+    -- auto blox fruit dealer start
+
+local FruitSection = MainTab:NewSection("Blox Fruit Dealer")
+FruitSection:NewLabel("Auto buy will replace your current fruit.") 
+FruitSection:NewToggle("Auto Buy Kilo", "Auto Buy Kilo", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spin", "Auto Buy Spin", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spin-Spin", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Chop", "Auto Buy Chop", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Chop-Chop", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spring", "Auto Buy Spring", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spring-Spring", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spike", "Auto Buy Spike", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spike-Spike", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Flame", "Auto Buy Flame", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Flame-Flame", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Falcon", "Auto Buy Falcon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Falcon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Ice", "Auto Buy Ice", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Ice-Ice", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Sand", "Auto Buy Sand", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Sand-Sand", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Revive", "Auto Buy Revive", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Revive-Revive", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dark", "Auto Buy Dark", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dark-Dark", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+FruitSection:NewToggle("Auto Buy Diamond", "Auto Buy Diamond", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Diamond-Diamond", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Light", "Auto Buy Light", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Light-Light", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Love", "Auto Buy Love", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Love-Love", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rubber", "Auto Buy Rubber", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rubber-Rubber", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Barrier", "Auto Buy Barrier", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Barrier-Barrier", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Magma", "Auto Buy Magma", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Door", "Auto Buy Door", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Door-Door", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Quake", "Auto Buy Quake", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Quake-Quake", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Buddha", "Auto Buy Buddha", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Human-Human:Buddha", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy String", "Auto Buy String", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "String-String", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Phoenix", "Auto Buy Phoenix", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Phoenix", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rumble", "Auto Buy Rumble", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rumble-Rumble", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Paw", "Auto Buy Paw", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Paw-Paw", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Gravity", "Auto Buy Gravity", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Gravity-Gravity", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dough", "Auto Buy Dough", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dough-Dough", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Shadow", "Auto Buy Shadow", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Shadow-Shadow", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Venom", "Auto Buy Venom", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Venom-Venom", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Control", "Auto Buy Control", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Control-Control", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Soul", "Auto Buy Soul", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Soul-Soul", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dragon", "Auto Buy Dragon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dragon-Dragon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Leopard", "Auto Buy Leopard", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Leopard-Leopard", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+
+
+
+-- auto blox fruit dealer end
+local NewPlayerTab = Window:NewTab("Local Player")
+
+local NewPlayerSection = NewPlayerTab:NewSection("Race")
+
+NewPlayerSection:NewToggle("Auto Race Ability", "Auto use race ability", function(state)
+    if state then
+       getgenv().autoRace = true
+
+       spawn (function()
+        while getgenv().autoRace == true do
+       
+       
+        local args = {
+            [1] = "ActivateAbility"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+        wait()
+    end
+end)
+    else
+        getgenv().autoRace = false
+
+        spawn (function()
+         while getgenv().autoRace == true do
+        
+        
+         local args = {
+             [1] = "ActivateAbility"
+         }
+         
+         game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+         wait()
+     end
+ end)
+    end
+end)
+-- auto race end 
+--shop start 
+local ShopTab = Window:NewTab("Shop")
+local FightingStyleTab = ShopTab:NewSection("Fighting Styles")
+
+FightingStyleTab:NewButton("Death Step", "Buy Death Step", function()
+    local args = {
+        [1] = "BuyDeathStep" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dark Step", "Buy Dark Step", function()
+local args = {
+    [1] = "BuyBlackLeg"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric", "Buy Electric", function()
+    local args = {
+        [1] = "BuyElectro" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric Claw", "Buy Electric Claw", function()
+    local args = {
+        [1] = "BuyElectricClaw" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Water Kung Fu", "Buy Water Kung Fu", function()
+    local args = {
+        [1] = "BuyFishmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Sharkman Karate", "Buy Sharkman Karate", function()
+    local args = {
+        [1] = "BuySharkmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+
+FightingStyleTab:NewButton("Superhuman", "Buy Superhuman", function()
+    local args = {
+        [1] = "BuySuperhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Goduman", "Buy Godhuman", function()
+    local args = {
+        [1] = "BuyGodhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Dragon Breath", "Buy Dragon Breath", function()
+    local args = {
+        [1] = "BlackbeardReward",
+        [2] = "DragonClaw",
+        [3] = "2"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dragon Talon", "Buy Dragon Talon", function()
+    local args = {
+        [1] = "BuyDragonTalon"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+local HakiSection = ShopTab:NewSection("Haki")
+
+HakiSection:NewButton("Skyjump", "Buy Skyjump", function()
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Geppo"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Enhancement", "Buy Enhancement", function()
+   
+
+local args = {
+    [1] = "BuyHaki",
+    [2] = "Buso"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Soru", "Buy Soru", function()
+   
+
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Soru"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    end)
+
+
+
+
+
+-- shop end
+local Tab2 = Window:NewTab("Settings")
+
+local Section2 = Tab2:NewSection("Toggle GUI")
+
+Section2:NewKeybind("Click to Toggle UI", " ", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
   -- blox fruits 1st sea  ends here
  
   -- blox fruits 2nd sea starts here
@@ -847,37 +3409,4031 @@ end)
 
     local MainTab = Window:NewTab("Main")
 
-    local FruitSection = MainTab:NewSection("Fruits")
+    
 
-    local AbilitiesSection = MainTab:NewSection("Abilities")
+     
+    local CousinSection = MainTab:NewSection("Blox Fruit Dealer Cousin")
+    CousinSection:NewToggle("Auto Blox Fruit Cousin", "Auto buy blox fruit cousin every 2 hours", function(state)
 
-    AbilitiesSection:NewToggle("Auto Race Ability", "Auto use race ability", function(state)
+    
         if state then
-         getgenv().autoRace = true
-         spawn (function()
-            while getgenv().autoRace == true do
-         
-            local args = {
-                [1] = "ActivateAbility"
-            }
-            
-            game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
-            wait()
-        end
+            getgenv().autoCousin = true
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
     end)
         else
-            getgenv().autoRace = false
-            spawn (function()
-               while getgenv().autoRace == true do
-            
-               local args = {
-                   [1] = "ActivateAbility"
-               }
-               
-               game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
-               wait()
-           end
-       end)
+            getgenv().autoCousin = false
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
         end
     end)
+
+
+
+
+    -- auto blox fruit dealer start
+
+local FruitSection = MainTab:NewSection("Blox Fruit Dealer")
+FruitSection:NewLabel("Auto buy will replace your current fruit.") 
+FruitSection:NewToggle("Auto Buy Kilo", "Auto Buy Kilo", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spin", "Auto Buy Spin", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spin-Spin", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Chop", "Auto Buy Chop", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Chop-Chop", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spring", "Auto Buy Spring", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spring-Spring", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spike", "Auto Buy Spike", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spike-Spike", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Flame", "Auto Buy Flame", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Flame-Flame", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Falcon", "Auto Buy Falcon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Falcon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Ice", "Auto Buy Ice", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Ice-Ice", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Sand", "Auto Buy Sand", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Sand-Sand", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Revive", "Auto Buy Revive", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Revive-Revive", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dark", "Auto Buy Dark", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dark-Dark", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+FruitSection:NewToggle("Auto Buy Diamond", "Auto Buy Diamond", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Diamond-Diamond", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Light", "Auto Buy Light", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Light-Light", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Love", "Auto Buy Love", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Love-Love", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rubber", "Auto Buy Rubber", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rubber-Rubber", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Barrier", "Auto Buy Barrier", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Barrier-Barrier", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Magma", "Auto Buy Magma", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Door", "Auto Buy Door", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Door-Door", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Quake", "Auto Buy Quake", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Quake-Quake", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Buddha", "Auto Buy Buddha", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Human-Human:Buddha", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy String", "Auto Buy String", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "String-String", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Phoenix", "Auto Buy Phoenix", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Phoenix", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rumble", "Auto Buy Rumble", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rumble-Rumble", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Paw", "Auto Buy Paw", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Paw-Paw", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Gravity", "Auto Buy Gravity", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Gravity-Gravity", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dough", "Auto Buy Dough", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dough-Dough", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Shadow", "Auto Buy Shadow", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Shadow-Shadow", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Venom", "Auto Buy Venom", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Venom-Venom", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Control", "Auto Buy Control", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Control-Control", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Soul", "Auto Buy Soul", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Soul-Soul", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dragon", "Auto Buy Dragon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dragon-Dragon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Leopard", "Auto Buy Leopard", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Leopard-Leopard", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+
+
+
+-- auto blox fruit dealer end
+local NewPlayerTab = Window:NewTab("Local Player")
+
+local NewPlayerSection = NewPlayerTab:NewSection("Race")
+
+NewPlayerSection:NewToggle("Auto Race Ability", "Auto use race ability", function(state)
+    if state then
+       getgenv().autoRace = true
+
+       spawn (function()
+        while getgenv().autoRace == true do
+       
+       
+        local args = {
+            [1] = "ActivateAbility"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+        wait()
+    end
+end)
+    else
+        getgenv().autoRace = false
+
+        spawn (function()
+         while getgenv().autoRace == true do
+        
+        
+         local args = {
+             [1] = "ActivateAbility"
+         }
+         
+         game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+         wait()
+     end
+ end)
+    end
+end)
+
+local ESPSection = NewPlayerTab:NewSection("ESP")
+
+ESPSection:NewButton("Player ESP", "Player ESP", function()
+    local c = workspace.CurrentCamera
+local ps = game:GetService("Players")
+local lp = ps.LocalPlayer
+local rs = game:GetService("RunService")
+
+local function getdistancefc(part)
+    return (part.Position - c.CFrame.Position).Magnitude
+end
+
+local function esp(p,cr)
+    local h = cr:WaitForChild("Humanoid")
+    local hrp = cr:WaitForChild("HumanoidRootPart")
+
+    local text = Drawing.new("Text")
+    text.Visible = false
+    text.Center = true 
+    text.Outline = true 
+    text.Font = 2
+    text.Color = Color3.fromRGB(255,255,255)
+    text.Size = 13
+
+    local c1 
+    local c2 
+    local c3 
+
+    local function dc()
+        text.Visible = false
+        text:Remove()
+        if c1 then
+            c1:Disconnect()
+            c1 = nil 
+        end
+        if c2 then
+            c2:Disconnect()
+            c2 = nil 
+        end
+        if c3 then
+            c3:Disconnect()
+            c3 = nil 
+        end
+    end
+
+    c2 = cr.AncestryChanged:Connect(function(_,parent)
+        if not parent then
+            dc()
+        end
+    end)
+
+    c3 = h.HealthChanged:Connect(function(v)
+        if (v<=0) or (h:GetState() == Enum.HumanoidStateType.Dead) then
+            dc()
+        end
+    end)
+
+    c1 = rs.RenderStepped:Connect(function()
+        local hrp_pos,hrp_os = c:WorldToViewportPoint(hrp.Position)
+        if hrp_os then
+            text.Position = Vector2.new(hrp_pos.X,hrp_pos.Y)
+            text.Text = p.Name .. ' ('..tostring(math.floor(getdistancefc(hrp)))..' ms)'
+            text.Visible = true 
+        else
+            text.Visible = false 
+        end
+    end)
+end
+
+local function p_added(p)
+    if p.Character then
+        esp(p,p.Character)
+    end
+    p.CharacterAdded:Connect(function(cr)
+        esp(p,cr)
+    end)
+end
+
+
+for i,p in next, ps:GetPlayers() do 
+    if p ~= lp then
+        p_added(p)
+    end
+end
+
+ps.PlayerAdded:Connect(p_added)
+end)
+
+
+-- auto race end 
+--shop start 
+local ShopTab = Window:NewTab("Shop")
+local FightingStyleTab = ShopTab:NewSection("Fighting Styles")
+
+FightingStyleTab:NewButton("Death Step", "Buy Death Step", function()
+    local args = {
+        [1] = "BuyDeathStep" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dark Step", "Buy Dark Step", function()
+local args = {
+    [1] = "BuyBlackLeg"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric", "Buy Electric", function()
+    local args = {
+        [1] = "BuyElectro" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric Claw", "Buy Electric Claw", function()
+    local args = {
+        [1] = "BuyElectricClaw" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Water Kung Fu", "Buy Water Kung Fu", function()
+    local args = {
+        [1] = "BuyFishmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Sharkman Karate", "Buy Sharkman Karate", function()
+    local args = {
+        [1] = "BuySharkmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+
+FightingStyleTab:NewButton("Superhuman", "Buy Superhuman", function()
+    local args = {
+        [1] = "BuySuperhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Goduman", "Buy Godhuman", function()
+    local args = {
+        [1] = "BuyGodhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Dragon Breath", "Buy Dragon Breath", function()
+    local args = {
+        [1] = "BlackbeardReward",
+        [2] = "DragonClaw",
+        [3] = "2"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dragon Talon", "Buy Dragon Talon", function()
+    local args = {
+        [1] = "BuyDragonTalon"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+local HakiSection = ShopTab:NewSection("Haki")
+
+HakiSection:NewButton("Skyjump", "Buy Skyjump", function()
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Geppo"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Enhancement", "Buy Enhancement", function()
+   
+
+local args = {
+    [1] = "BuyHaki",
+    [2] = "Buso"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Soru", "Buy Soru", function()
+   
+
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Soru"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    end)
+
+
+
+
+
+-- shop end
+local Tab2 = Window:NewTab("Settings")
+
+local Section2 = Tab2:NewSection("Toggle GUI")
+
+Section2:NewKeybind("Click to Toggle UI", " ", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+
+
+
+  elseif game.PlaceId == 4442272183 then
+
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/drepdmoney/BackupUI/main/backuilua"))()
+
+    local Window = Library.CreateLib("Dreps Hub | Blox Fruits", "DarkTheme")
+
+    local MainTab = Window:NewTab("Main")
+
+    
+
+     
+    local CousinSection = MainTab:NewSection("Blox Fruit Dealer Cousin")
+    CousinSection:NewToggle("Auto Blox Fruit Cousin", "Auto buy blox fruit cousin every 2 hours", function(state)
+
+    
+        if state then
+            getgenv().autoCousin = true
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        else
+            getgenv().autoCousin = false
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        end
+    end)
+
+
+
+
+    -- auto blox fruit dealer start
+
+local FruitSection = MainTab:NewSection("Blox Fruit Dealer")
+FruitSection:NewLabel("Auto buy will replace your current fruit.") 
+FruitSection:NewToggle("Auto Buy Kilo", "Auto Buy Kilo", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spin", "Auto Buy Spin", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spin-Spin", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Chop", "Auto Buy Chop", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Chop-Chop", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spring", "Auto Buy Spring", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spring-Spring", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spike", "Auto Buy Spike", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spike-Spike", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Flame", "Auto Buy Flame", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Flame-Flame", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Falcon", "Auto Buy Falcon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Falcon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Ice", "Auto Buy Ice", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Ice-Ice", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Sand", "Auto Buy Sand", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Sand-Sand", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Revive", "Auto Buy Revive", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Revive-Revive", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dark", "Auto Buy Dark", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dark-Dark", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+FruitSection:NewToggle("Auto Buy Diamond", "Auto Buy Diamond", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Diamond-Diamond", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Light", "Auto Buy Light", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Light-Light", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Love", "Auto Buy Love", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Love-Love", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rubber", "Auto Buy Rubber", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rubber-Rubber", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Barrier", "Auto Buy Barrier", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Barrier-Barrier", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Magma", "Auto Buy Magma", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Door", "Auto Buy Door", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Door-Door", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Quake", "Auto Buy Quake", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Quake-Quake", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Buddha", "Auto Buy Buddha", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Human-Human:Buddha", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy String", "Auto Buy String", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "String-String", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Phoenix", "Auto Buy Phoenix", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Phoenix", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rumble", "Auto Buy Rumble", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rumble-Rumble", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Paw", "Auto Buy Paw", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Paw-Paw", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Gravity", "Auto Buy Gravity", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Gravity-Gravity", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dough", "Auto Buy Dough", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dough-Dough", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Shadow", "Auto Buy Shadow", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Shadow-Shadow", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Venom", "Auto Buy Venom", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Venom-Venom", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Control", "Auto Buy Control", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Control-Control", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Soul", "Auto Buy Soul", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Soul-Soul", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dragon", "Auto Buy Dragon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dragon-Dragon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Leopard", "Auto Buy Leopard", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Leopard-Leopard", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+
+
+
+-- auto blox fruit dealer end
+local NewPlayerTab = Window:NewTab("Local Player")
+
+local NewPlayerSection = NewPlayerTab:NewSection("Race")
+
+NewPlayerSection:NewToggle("Auto Race Ability", "Auto use race ability", function(state)
+    if state then
+       getgenv().autoRace = true
+
+       spawn (function()
+        while getgenv().autoRace == true do
+       
+       
+        local args = {
+            [1] = "ActivateAbility"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+        wait()
+    end
+end)
+    else
+        getgenv().autoRace = false
+
+        spawn (function()
+         while getgenv().autoRace == true do
+        
+        
+         local args = {
+             [1] = "ActivateAbility"
+         }
+         
+         game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+         wait()
+     end
+ end)
+    end
+end)
+-- auto race end 
+--shop start 
+local ShopTab = Window:NewTab("Shop")
+local FightingStyleTab = ShopTab:NewSection("Fighting Styles")
+
+FightingStyleTab:NewButton("Death Step", "Buy Death Step", function()
+    local args = {
+        [1] = "BuyDeathStep" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dark Step", "Buy Dark Step", function()
+local args = {
+    [1] = "BuyBlackLeg"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric", "Buy Electric", function()
+    local args = {
+        [1] = "BuyElectro" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric Claw", "Buy Electric Claw", function()
+    local args = {
+        [1] = "BuyElectricClaw" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Water Kung Fu", "Buy Water Kung Fu", function()
+    local args = {
+        [1] = "BuyFishmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Sharkman Karate", "Buy Sharkman Karate", function()
+    local args = {
+        [1] = "BuySharkmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+
+FightingStyleTab:NewButton("Superhuman", "Buy Superhuman", function()
+    local args = {
+        [1] = "BuySuperhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Goduman", "Buy Godhuman", function()
+    local args = {
+        [1] = "BuyGodhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Dragon Breath", "Buy Dragon Breath", function()
+    local args = {
+        [1] = "BlackbeardReward",
+        [2] = "DragonClaw",
+        [3] = "2"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dragon Talon", "Buy Dragon Talon", function()
+    local args = {
+        [1] = "BuyDragonTalon"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+local HakiSection = ShopTab:NewSection("Haki")
+
+HakiSection:NewButton("Skyjump", "Buy Skyjump", function()
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Geppo"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Enhancement", "Buy Enhancement", function()
+   
+
+local args = {
+    [1] = "BuyHaki",
+    [2] = "Buso"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Soru", "Buy Soru", function()
+   
+
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Soru"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    end)
+
+
+
+
+
+-- shop end
+local Tab2 = Window:NewTab("Settings")
+
+local Section2 = Tab2:NewSection("Toggle GUI")
+
+Section2:NewKeybind("Click to Toggle UI", " ", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
+
+
+  elseif game.PlaceId == 7449423635  then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/drepdmoney/BackupUI/main/backuilua"))()
+
+    local Window = Library.CreateLib("Dreps Hub | Blox Fruits", "DarkTheme")
+
+    local MainTab = Window:NewTab("Main")
+
+    
+
+     
+    local CousinSection = MainTab:NewSection("Blox Fruit Dealer Cousin")
+    CousinSection:NewToggle("Auto Blox Fruit Cousin", "Auto buy blox fruit cousin every 2 hours", function(state)
+
+    
+        if state then
+            getgenv().autoCousin = true
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        else
+            getgenv().autoCousin = false
+    
+    spawn (function()
+        while getgenv().autoCousin == true do
+    
+    local args = {
+        [1] = "Cousin",
+        [2] = "Buy"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    
+    wait()
+    end
+    end)
+        end
+    end)
+
+
+
+
+    -- auto blox fruit dealer start
+
+local FruitSection = MainTab:NewSection("Blox Fruit Dealer")
+FruitSection:NewLabel("Auto buy will replace your current fruit.") 
+FruitSection:NewToggle("Auto Buy Kilo", "Auto Buy Kilo", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spin", "Auto Buy Spin", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spin-Spin", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Chop", "Auto Buy Chop", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Chop-Chop", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spring", "Auto Buy Spring", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spring-Spring", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Spike", "Auto Buy Spike", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Spike-Spike", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Flame", "Auto Buy Flame", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Flame-Flame", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Falcon", "Auto Buy Falcon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Falcon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Ice", "Auto Buy Ice", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Ice-Ice", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Sand", "Auto Buy Sand", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Sand-Sand", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Revive", "Auto Buy Revive", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Revive-Revive", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dark", "Auto Buy Dark", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dark-Dark", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+FruitSection:NewToggle("Auto Buy Diamond", "Auto Buy Diamond", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Diamond-Diamond", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Light", "Auto Buy Light", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Light-Light", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Love", "Auto Buy Love", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Love-Love", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rubber", "Auto Buy Rubber", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rubber-Rubber", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Barrier", "Auto Buy Barrier", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Barrier-Barrier", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Magma", "Auto Buy Magma", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Magma-Magma", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Door", "Auto Buy Door", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Door-Door", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Quake", "Auto Buy Quake", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Quake-Quake", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Buddha", "Auto Buy Buddha", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Human-Human:Buddha", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy String", "Auto Buy String", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "String-String", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Phoenix", "Auto Buy Phoenix", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Bird-Bird:Phoenix", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Rumble", "Auto Buy Rumble", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Rumble-Rumble", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Paw", "Auto Buy Paw", function(state)
+    if state then
+        getgenv().autoDealer = true
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Paw-Paw", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Gravity", "Auto Buy Gravity", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Gravity-Gravity", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dough", "Auto Buy Dough", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dough-Dough", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Shadow", "Auto Buy Shadow", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Shadow-Shadow", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Venom", "Auto Buy Venom", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Venom-Venom", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Control", "Auto Buy Control", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Control-Control", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Soul", "Auto Buy Soul", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Soul-Soul", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Dragon", "Auto Buy Dragon", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Dragon-Dragon", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+        spawn(function()
+            while getgenv().autoDealer == true do
+        
+        local args = {
+            [1] = "PurchaseRawFruit",
+            [2] = "Kilo-Kilo", -- fruit
+            [3] = false
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+        wait()
+        end
+        end)
+    end
+end)
+FruitSection:NewToggle("Auto Buy Leopard", "Auto Buy Leopard", function(state)
+    if state then
+        getgenv().autoDealer = true
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Leopard-Leopard", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    else
+        getgenv().autoDealer = false
+spawn(function()
+    while getgenv().autoDealer == true do
+
+local args = {
+    [1] = "PurchaseRawFruit",
+    [2] = "Kilo-Kilo", -- fruit
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+wait()
+end
+end)
+    end
+end)
+
+
+
+
+-- auto blox fruit dealer end
+local NewPlayerTab = Window:NewTab("Local Player")
+
+local NewPlayerSection = NewPlayerTab:NewSection("Race")
+
+NewPlayerSection:NewToggle("Auto Race Ability", "Auto use race ability", function(state)
+    if state then
+       getgenv().autoRace = true
+
+       spawn (function()
+        while getgenv().autoRace == true do
+       
+       
+        local args = {
+            [1] = "ActivateAbility"
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+        wait()
+    end
+end)
+    else
+        getgenv().autoRace = false
+
+        spawn (function()
+         while getgenv().autoRace == true do
+        
+        
+         local args = {
+             [1] = "ActivateAbility"
+         }
+         
+         game:GetService("ReplicatedStorage").Remotes.CommE:FireServer(unpack(args))
+         wait()
+     end
+ end)
+    end
+end)
+local ESPSection = NewPlayerTab:NewSection("ESP")
+
+ESPSection:NewButton("Player ESP", "Player ESP", function()
+    local c = workspace.CurrentCamera
+local ps = game:GetService("Players")
+local lp = ps.LocalPlayer
+local rs = game:GetService("RunService")
+
+local function getdistancefc(part)
+    return (part.Position - c.CFrame.Position).Magnitude
+end
+
+local function esp(p,cr)
+    local h = cr:WaitForChild("Humanoid")
+    local hrp = cr:WaitForChild("HumanoidRootPart")
+
+    local text = Drawing.new("Text")
+    text.Visible = false
+    text.Center = true 
+    text.Outline = true 
+    text.Font = 2
+    text.Color = Color3.fromRGB(255,255,255)
+    text.Size = 13
+
+    local c1 
+    local c2 
+    local c3 
+
+    local function dc()
+        text.Visible = false
+        text:Remove()
+        if c1 then
+            c1:Disconnect()
+            c1 = nil 
+        end
+        if c2 then
+            c2:Disconnect()
+            c2 = nil 
+        end
+        if c3 then
+            c3:Disconnect()
+            c3 = nil 
+        end
+    end
+
+    c2 = cr.AncestryChanged:Connect(function(_,parent)
+        if not parent then
+            dc()
+        end
+    end)
+
+    c3 = h.HealthChanged:Connect(function(v)
+        if (v<=0) or (h:GetState() == Enum.HumanoidStateType.Dead) then
+            dc()
+        end
+    end)
+
+    c1 = rs.RenderStepped:Connect(function()
+        local hrp_pos,hrp_os = c:WorldToViewportPoint(hrp.Position)
+        if hrp_os then
+            text.Position = Vector2.new(hrp_pos.X,hrp_pos.Y)
+            text.Text = p.Name .. ' ('..tostring(math.floor(getdistancefc(hrp)))..' ms)'
+            text.Visible = true 
+        else
+            text.Visible = false 
+        end
+    end)
+end
+
+local function p_added(p)
+    if p.Character then
+        esp(p,p.Character)
+    end
+    p.CharacterAdded:Connect(function(cr)
+        esp(p,cr)
+    end)
+end
+
+
+for i,p in next, ps:GetPlayers() do 
+    if p ~= lp then
+        p_added(p)
+    end
+end
+
+ps.PlayerAdded:Connect(p_added)
+end)
+
+-- auto race end 
+--shop start 
+local ShopTab = Window:NewTab("Shop")
+local FightingStyleTab = ShopTab:NewSection("Fighting Styles")
+
+FightingStyleTab:NewButton("Death Step", "Buy Death Step", function()
+    local args = {
+        [1] = "BuyDeathStep" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dark Step", "Buy Dark Step", function()
+local args = {
+    [1] = "BuyBlackLeg"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric", "Buy Electric", function()
+    local args = {
+        [1] = "BuyElectro" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Electric Claw", "Buy Electric Claw", function()
+    local args = {
+        [1] = "BuyElectricClaw" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Water Kung Fu", "Buy Water Kung Fu", function()
+    local args = {
+        [1] = "BuyFishmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Sharkman Karate", "Buy Sharkman Karate", function()
+    local args = {
+        [1] = "BuySharkmanKarate" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+
+FightingStyleTab:NewButton("Superhuman", "Buy Superhuman", function()
+    local args = {
+        [1] = "BuySuperhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Goduman", "Buy Godhuman", function()
+    local args = {
+        [1] = "BuyGodhuman" -- any fighting style
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+FightingStyleTab:NewButton("Dragon Breath", "Buy Dragon Breath", function()
+    local args = {
+        [1] = "BlackbeardReward",
+        [2] = "DragonClaw",
+        [3] = "2"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+FightingStyleTab:NewButton("Dragon Talon", "Buy Dragon Talon", function()
+    local args = {
+        [1] = "BuyDragonTalon"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+local HakiSection = ShopTab:NewSection("Haki")
+
+HakiSection:NewButton("Skyjump", "Buy Skyjump", function()
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Geppo"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Enhancement", "Buy Enhancement", function()
+   
+
+local args = {
+    [1] = "BuyHaki",
+    [2] = "Buso"
+}
+
+game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+end)
+
+HakiSection:NewButton("Soru", "Buy Soru", function()
+   
+
+    local args = {
+        [1] = "BuyHaki",
+        [2] = "Soru"
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+    end)
+
+
+
+
+
+
+
+
+
+-- shop end
+local Tab2 = Window:NewTab("Settings")
+
+local Section2 = Tab2:NewSection("Toggle GUI")
+
+Section2:NewKeybind("Click to Toggle UI", " ", Enum.KeyCode.RightControl, function()
+	Library:ToggleUI()
+end)
 end
